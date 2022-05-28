@@ -26,6 +26,8 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+    - run: npm ci
+    - run: npm test
     - run: npm i
     - run: node index.js
     - name: Keep Alive.
